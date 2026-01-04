@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mordow Real Estate LLC | Residential Property Management | Treasure Valley</title>
+  <meta name="description" content="Mordow Real Estate LLC provides residential property management in the Treasure Valley. Responsive communication, tenant placement, maintenance coordination, and clear reporting." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --text:#eaf0ff;
+      --muted:#b9c3e6;
+      --accent:#6ea8fe;
+      --accent2:#7ee787;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(110,168,254,.25), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(126,231,135,.18), transparent 60%),
+        linear-gradient(180deg, #070b14 0%, var(--bg) 60%, #070b14 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 0 18px;}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.65);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:850; letter-spacing:.2px}
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
+    }
+    .brand small{display:block;color:var(--muted);font-weight:650;margin-top:2px}
+    .navlinks{display:flex; gap:18px; align-items:center; font-weight:650; color:var(--muted); flex-wrap:wrap}
+    .navlinks a{padding:8px 10px; border-radius:12px}
+    .navlinks a:hover{background: rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:14px; font-weight:850;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#071018;
+      box-shadow: var(--shadow);
+      border:0;
+      white-space:nowrap;
+    }
+    .cta:hover{filter:brightness(1.04)}
+    .hero{padding: 72px 0 28px;}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    .card{
+      background: rgba(17,26,46,.78);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(32px, 4.2vw, 54px);
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size: 16.5px;
+      line-height:1.6;
+      margin: 0 0 18px;
+    }
+    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin: 16px 0 0}
+    .pill{
+      border:1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+      font-weight:650;
+      font-size: 13.5px;
+    }
+    .btnrow{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 11px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight:850;
+    }
+    .btn:hover{background: rgba(255,255,255,.10)}
+    .section{padding: 26px 0}
+    .section h2{
+      font-size: 22px;
+      margin: 0 0 14px;
+      letter-spacing:-.2px;
+    }
+    .cols{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 920px){ .cols{grid-template-columns:1fr} }
+    .item h3{margin: 0 0 6px; font-size: 16px}
+    .item p{margin:0; color:var(--muted); line-height:1.6}
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 920px){ .split{grid-template-columns:1fr} }
+    .quote{
+      border-left: 4px solid rgba(110,168,254,.55);
+      padding-left: 14px;
+      color: var(--muted);
+      line-height:1.7;
+      margin: 10px 0 0;
+    }
+    .checklist{display:grid; gap:10px; margin-top: 12px}
+    .check{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px 12px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+    }
+    .check b{display:block; margin-bottom:2px}
+    form{display:grid; gap: 10px}
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.25);
+      color: var(--text);
+      font: inherit;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .fine{color: var(--muted); font-size: 12.5px; line-height:1.5}
+    footer{
+      padding: 30px 0 46px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 26px;
+    }
+    .footgrid{
+      display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    }
+    .tag{
+      display:inline-flex; align-items:center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-weight:700;
+      font-size: 12.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <div>Mordow Real Estate LLC</div>
+            <small>Residential Property Management • Treasure Valley</small>
+          </div>
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#owners">For Owners</a>
+          <a href="#tenants">For Tenants</a>
+          <a href="#faq">FAQ</a>
+          <a class="cta" href="#contact">Request a Consultation</a>
+        </nav>
+
+        <a class="cta" href="tel:12089719799">Call 208-971-9799</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="grid">
+        <div class="card">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+            <span class="tag">Treasure Valley</span>
+            <span class="tag">Residential Rentals</span>
+            <span class="tag">Owner-first Service</span>
+          </div>
+
+          <h1>Property management that protects your investment—and your time.</h1>
+          <p class="sub">
+            Mordow Real Estate LLC helps homeowners and investors handle the day-to-day of rentals:
+            <b>tenant placement</b>, <b>maintenance coordination</b>, <b>rent collection</b>, and <b>clear reporting</b>.
+          </p>
+
+          <div class="btnrow">
+            <a class="cta" href="#contact">Request a Consultation</a>
+            <a class="btn" href="#services">See Services</a>
+            <a class="btn" href="tel:12089719799">Call Now</a>
+          </div>
+
+          <div class="pillrow" aria-label="Highlights">
+            <div class="pill">✅ Screening-focused tenant placement</div>
+            <div class="pill">🛠️ Maintenance coordination</div>
+            <div class="pill">💬 Responsive communication</div>
+            <div class="pill">📄 Simple reporting</div>
+          </div>
+
+          <p class="quote">
+            “If you want something specific like strict screening, hands-off maintenance, or faster leasing —
+            we can build a plan around your goals.”
+          </p>
+        </div>
+
+        <aside class="card">
+          <h2 style="margin:0 0 10px">Quick Consultation Request</h2>
+          <p class="sub" style="margin-top:0">
+            Tell us a little about the property and what you need. We’ll reach out ASAP.
+          </p>
+
+          <!-- Replace YOUR_EMAIL@example.com with your email.
+               This uses FormSubmit to send leads to your inbox without a backend. -->
+          <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+            <input type="hidden" name="_subject" value="New lead: Mordow Real Estate LLC" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="tel" name="phone" placeholder="Phone" required />
+            <input type="email" name="email" placeholder="Email" required />
+
+            <input type="text" name="property_address" placeholder="Property address (optional)" />
+            <input type="text" name="property_type" placeholder="Property type (single-family, townhouse, etc.)" />
+            <textarea name="message" placeholder="What can we help with? (Placement, full management, maintenance, etc.)" required></textarea>
+
+            <button class="cta" type="submit">Send Request</button>
+            <div class="fine">By submitting, you agree to be contacted about your request.</div>
+          </form>
+
+          <div style="margin-top:14px">
+            <div class="fine">Prefer to talk now?</div>
+            <a class="btn" style="margin-top:8px;width:100%" href="tel:12089719799">Call 208-971-9799</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="card">
+        <h2>Services</h2>
+        <div class="cols">
+          <div class="item">
+            <h3>Tenant Placement</h3>
+            <p>Marketing, showings, applications, screening, and lease setup to help you get a qualified tenant in place.</p>
+          </div>
+          <div class="item">
+            <h3>Full-Service Management</h3>
+            <p>Rent collection, tenant communication, renewals, compliance support, and ongoing oversight—handled end-to-end.</p>
+          </div>
+          <div class="item">
+            <h3>Maintenance Coordination</h3>
+            <p>Repair requests, vendor scheduling, and follow-through to keep the home protected and tenants taken care of.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="owners" class="section">
+      <div class="split">
+        <div class="card">
+          <h2>For Property Owners</h2>
+          <p class="sub" style="margin-top:0">
+            You want fewer headaches, reliable income, and confidence that your property is being protected.
+          </p>
+          <div class="checklist">
+            <div class="check">
+              <div>✅</div>
+              <div><b>Clear process</b><span class="fine"> From onboarding to leasing and renewals, you’ll know what to expect.</span></div>
+            </div>
+            <div class="check">
+              <div>✅</div>
+              <div><b>Communication</b><span class="fine"> Quick updates, straightforward answers, and fewer surprises.</span></div>
+            </div>
+            <div class="check">
+              <div>✅</div>
+              <div><b>Protect the home</b><span class="fine"> Maintenance handled with follow-through and documentation.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>What we manage</h2>
+          <p class="sub" style="margin-top:0">
+            Residential rentals across the Treasure Valley — including:
+          </p>
+          <div class="pillrow">
+            <div class="pill">Single-family homes</div>
+            <div class="pill">Townhomes</div>
+            <div class="pill">Condos</div>
+            <div class="pill">Small multi-family (optional)</div>
+          </div>
+          <p class="quote">
+            Want help with a specific situation (turnover, delinquency, maintenance backlog)?
+            We can start with the piece you need and scale up from there.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tenants" class="section">
+      <div class="card">
+        <h2>For Tenants</h2>
+        <div class="cols">
+          <div class="item">
+            <h3>Responsive Support</h3>
+            <p>Clear communication and a simple process for questions and service requests.</p>
+          </div>
+          <div class="item">
+            <h3>Maintenance Requests</h3>
+            <p>Report issues and we’ll coordinate repairs and follow-through.</p>
+          </div>
+          <div class="item">
+            <h3>Respectful, Professional Management</h3>
+            <p>We aim for a smooth renting experience for everyone involved.</p>
+          </div>
+        </div>
+        <p class="fine" style="margin-top:12px">
+          (Optional) Add your portal link here once you have one: “Pay rent / submit maintenance requests.”
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="card">
+        <h2>FAQ</h2>
+        <div class="fine" style="margin-bottom:10px">You can edit these to match your exact policies.</div>
+
+        <details style="border:1px solid var(--border);border-radius:16px;padding:12px 14px;background:rgba(255,255,255,.04);margin-bottom:10px;">
+          <summary style="cursor:pointer;font-weight:850">What areas do you serve?</summary>
+          <p class="sub">Treasure Valley (Boise, Meridian, Nampa, Caldwell, and surrounding areas).</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:16px;padding:12px 14px;background:rgba(255,255,255,.04);margin-bottom:10px;">
+          <summary style="cursor:pointer;font-weight:850">Do you offer tenant placement only?</summary>
+          <p class="sub">Yes — we can help with placement only, or provide full-service property management.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:16px;padding:12px 14px;background:rgba(255,255,255,.04);margin-bottom:10px;">
+          <summary style="cursor:pointer;font-weight:850">How do you handle maintenance?</summary>
+          <p class="sub">We coordinate maintenance requests, schedule repairs, and follow up to help ensure issues are resolved and documented.</p>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:16px;padding:12px 14px;background:rgba(255,255,255,.04);">
+          <summary style="cursor:pointer;font-weight:850">How do I get started?</summary>
+          <p class="sub">Call <a class="btn" href="tel:12089719799">208-971-9799</a> or submit the consultation form and we’ll walk you through next steps.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="sub" style="margin-top:0">
+          Serving the <b>Treasure Valley</b><br/>
+          Phone: <a class="btn" href="tel:12089719799">208-971-9799</a>
+        </p>
+        <p class="fine">
+          Add email + office hours here if you want (recommended). You can also add your business address if applicable.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footgrid">
+        <div>© <span id="year"></span> Mordow Real Estate LLC. All rights reserved.</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="#services">Services</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
